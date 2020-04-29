@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "el0t:ingot_silver"
+    ]
+  },
+  "criteria": {
+    "has_silver_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "el0t:ore_silver"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "el0t:ore_silver"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_silver_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

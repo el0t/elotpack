@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "el0t:ingot_mithril"
+    }
+  },
+  "result": {
+    "item": "el0t:mithril_boots"
+  }
+}
