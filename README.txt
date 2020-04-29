@@ -9,7 +9,6 @@ Textures (pixel arts) are in resources/assets
 -=-=-=-=-=-=-=-
 
 
-
 -------------------------------------------
 Source installation information for modders
 -------------------------------------------

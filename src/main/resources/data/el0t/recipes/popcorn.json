@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "el0t:corellian_corncob"
+  },
+  "result": {
+    "item": "el0t:popcorn",
+    "count": 4
+  },
+  "experience": 0.20,
+  "cookingtime": 50
+}

@@ -20,6 +20,8 @@
   "block.el0t.corellian_corn": "Corellian Seeds",
   "item.el0t.corellian_seed": "Corellian Seeds",
   "item.el0t.corellian_corncob": "Corellian Corn",
+  "item.el0t.popcorn": "Popcorn",
+  "item.el0t.zombie_jerky": "Zombie Jerky",
   "itemGroup.ElotPack Items": "Elot Pack Items",
   "itemGroup.ElotPack Blocks": "Elot Pack Blocks"
 }
