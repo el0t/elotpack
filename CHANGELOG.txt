@@ -1,11 +1,60 @@
+-----CHANGES-----
 4/29
 Added popcorn and zombie jerky items -elot
 
 4/28
-Added corellian corn crop -elot
+Added corellian corn crop/items -elot
 
 4/26
 Added mithril armor and tools -elot
 
 4/25
-Added onyx and silver materials -elot
+Added onyx and ore - elot
+Added silver ore and ingot - elot
+Added mithril ore and ingot - elot
+
+
+--Planned Changes--
+More materials
+Alloy smelter (new type of furnace)
+Potion of waterwalking
+
+Silver arrows and crossbow bolts
+Sniper arrow (no arrow drop) 
+Homing arrow 
+
+Add garlic crop - vampires non aggression
+
+Dinosaur mobs 
+Dinosaur hides and meat (an extremely satiating food)
+Unicorn mob (base on horse model)
+Unicorn horn, hide, and/or meat items
+Vampire bats mob
+Vampire mob (probably needs custom model and textures)
+Windigo
+
+Vampire dimension???: should always be night time in here
+  - Needs lore. maybe an end-stage capitalist apocalypse
+  -Blood fluid
+  -Dessicated soil and bricks
+  -structure generation
+    +villages of pale bloodbags used as tithes for the vamps
+    +boss fight
+  -Vampire boss chest and loot table 
+  -Loot: vampires love gold, new music disc, new enchantment that absorbs health
+  -Achievements
+Vampiric enchantment (absorb health) 
+
+Time portal
+Jurassic dimension: put dinosaurs in here
+  -massive custom trees
+  -coal is more rare
+  -no villages or modern mobs, will need ancient birds
+  -fishing might be the same
+  -custom dinosaur models and textures
+  -dinosaurs have massive health and damage output
+  - dinosaur hunting equipment such as a constructable ballista and dinosaur bait, for easier kills
+  -collectable dino bones as drops on loot tables for the different species allowing you to build a museum back home?
+
+
+
