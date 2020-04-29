@@ -62,4 +62,5 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CORELLIAN_CORNCOB = ITEMS.register("corellian_corncob", () -> new ItemBase((new Item.Properties())));
     public static final RegistryObject<Item> POPCORN = ITEMS.register("popcorn", () -> new Item((new Item.Properties()).food(ModFoods.POPCORN)));
     public static final RegistryObject<Item> ZOMBIE_JERKY = ITEMS.register("zombie_jerky", () -> new Item((new Item.Properties()).food(ModFoods.ZOMBIE_JERKY)));
+
 }

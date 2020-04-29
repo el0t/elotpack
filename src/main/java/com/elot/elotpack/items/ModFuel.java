@@ -21,3 +21,4 @@ public class ModFuel extends Item implements IForgeItem {
         return burnTime;
     }
 }
+
