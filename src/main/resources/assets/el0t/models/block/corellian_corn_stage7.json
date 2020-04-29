@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "el0t:blocks/corellian_corn_stage7"
+  }
+}
