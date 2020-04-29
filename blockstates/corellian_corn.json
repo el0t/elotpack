@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": {"model": "el0t:block/corellian_corn_stage0"},
+    "age=1": {"model": "el0t:block/corellian_corn_stage1"},
+    "age=2": {"model": "el0t:block/corellian_corn_stage2"},
+    "age=3": {"model": "el0t:block/corellian_corn_stage3"},
+    "age=4": {"model": "el0t:block/corellian_corn_stage4"},
+    "age=5": {"model": "el0t:block/corellian_corn_stage5"},
+    "age=6": {"model": "el0t:block/corellian_corn_stage6"},
+    "age=7": {"model": "el0t:block/corellian_corn_stage7"}
+  }
+}
