@@ -1,3 +1,15 @@
+-=-=-=-=-=-=-=-
+Elot Pack
+
+To help you guys understand my code: everything is registered in the util/RegistryHandler class, the important info for each new object is pretty much contained there. The ElotPack class just runs the init function from RegistryHandler So you can probably read RegistryHandler and figure everything else out.........
+There's base classes for items and blocks and also crops.... just in case there's methods we want to override or something.... came in handy when I wanted to make the new materials usable for beacons
+The json files for recipes and stuff like that are in resources/data
+Textures (pixel arts) are in resources/assets
+
+-=-=-=-=-=-=-=-
+
+
+
 -------------------------------------------
 Source installation information for modders
 -------------------------------------------
