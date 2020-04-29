@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "el0t:mithril_block"
+    ]
+  },
+  "criteria": {
+    "has_m": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "el0t:ingot_mithril"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "el0t:mithril_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_m",
+      "has_the_recipe"
+    ]
+  ]
+}
