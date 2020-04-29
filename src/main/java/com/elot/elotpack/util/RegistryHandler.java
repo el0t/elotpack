@@ -4,10 +4,7 @@ import com.elot.elotpack.ElotPack;
 import com.elot.elotpack.blocks.BlockBase;
 import com.elot.elotpack.blocks.ModCrop;
 import com.elot.elotpack.blocks.OreBlockBase;
-import com.elot.elotpack.items.BlockItemBase;
-import com.elot.elotpack.items.ItemBase;
-import com.elot.elotpack.items.ModArmorMaterial;
-import com.elot.elotpack.items.ModItemTier;
+import com.elot.elotpack.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
@@ -50,9 +47,9 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CORELLIAN_SEED = ITEMS.register("corellian_seed", () -> new BlockItemBase(CORELLIAN_CORN.get()));
 
     // Items
-    public static final RegistryObject<Item> ONYX = ITEMS.register("onyx", () -> new ItemBase().setBeaconPayment());
-    public static final RegistryObject<Item> INGOT_SILVER = ITEMS.register("ingot_silver", ItemBase::new);
-    public static final RegistryObject<Item> INGOT_MITHRIL = ITEMS.register("ingot_mithril", ItemBase::new);
+    public static final RegistryObject<Item> ONYX = ITEMS.register("onyx", () -> new ItemBase((new Item.Properties())).setBeaconPayment());
+    public static final RegistryObject<Item> INGOT_SILVER = ITEMS.register("ingot_silver", () -> new ItemBase((new Item.Properties())));
+    public static final RegistryObject<Item> INGOT_MITHRIL = ITEMS.register("ingot_mithril", () -> new ItemBase((new Item.Properties())));
     public static final RegistryObject<Item> MITHRIL_SWORD = ITEMS.register("mithril_sword", () -> new SwordItem(ModItemTier.MITHRIL, 3, -2.4F, new Item.Properties().group(ElotPack.TAB)));
     public static final RegistryObject<Item> MITHRIL_PICKAXE = ITEMS.register("mithril_pickaxe", () -> new PickaxeItem(ModItemTier.MITHRIL, 1, -2.8F, new Item.Properties().group(ElotPack.TAB)));
     public static final RegistryObject<Item> MITHRIL_SHOVEL = ITEMS.register("mithril_shovel", () -> new ShovelItem(ModItemTier.MITHRIL, 1.5F, -3.0F, new Item.Properties().group(ElotPack.TAB)));
@@ -62,6 +59,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> MITHRIL_CHESTPLATE = ITEMS.register("mithril_chestplate", () -> new ArmorItem(ModArmorMaterial.MITHRIL, EquipmentSlotType.CHEST, (new Item.Properties()).group(ElotPack.TAB)));
     public static final RegistryObject<Item> MITHRIL_LEGGINGS = ITEMS.register("mithril_leggings", () -> new ArmorItem(ModArmorMaterial.MITHRIL, EquipmentSlotType.LEGS, (new Item.Properties()).group(ElotPack.TAB)));
     public static final RegistryObject<Item> MITHRIL_BOOTS = ITEMS.register("mithril_boots", () -> new ArmorItem(ModArmorMaterial.MITHRIL, EquipmentSlotType.FEET, (new Item.Properties()).group(ElotPack.TAB)));
-    public static final RegistryObject<Item> CORELLIAN_CORNCOB = ITEMS.register("corellian_corncob", ItemBase::new);
-
+    public static final RegistryObject<Item> CORELLIAN_CORNCOB = ITEMS.register("corellian_corncob", () -> new ItemBase((new Item.Properties())));
+    public static final RegistryObject<Item> POPCORN = ITEMS.register("popcorn", () -> new Item((new Item.Properties()).food(ModFoods.POPCORN)));
+    public static final RegistryObject<Item> ZOMBIE_JERKY = ITEMS.register("zombie_jerky", () -> new Item((new Item.Properties()).food(ModFoods.ZOMBIE_JERKY)));
 }
