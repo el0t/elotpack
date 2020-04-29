@@ -4,6 +4,7 @@ Elot Pack
 - There's base classes for items and blocks and also crops.... just in case there's methods we want to override or something.... came in handy when I wanted to make the new materials usable for beacons
 - The json files for recipes and stuff like that are in resources/data
 - Textures (pixel arts) are in resources/assets
+- Changes and updates can be found in the modlog.txt file as we go
 
 Other useful commands:
 ------------------------------
