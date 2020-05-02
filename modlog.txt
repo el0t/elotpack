@@ -1,4 +1,11 @@
 -----CHANGES-----
+5/1
+Added the Womprat entity and model -elot
+Garlic seeds now drop from grass and womprats -elot
+
+4/30
+Added garlic crop and items - elot
+
 4/29
 Added popcorn and zombie jerky items -elot
 
