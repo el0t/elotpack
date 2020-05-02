@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
 @Mod.EventBusSubscriber(modid = ElotPack.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ElotPack {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "el0t";
     public static ElotPack instance;
 
