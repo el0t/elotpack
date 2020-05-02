@@ -2,6 +2,7 @@
 5/1
 Added the Womprat entity and model -elot
 Garlic seeds now drop from grass and womprats -elot
+Added silver dagger texture - elot
 
 4/30
 Added garlic crop and items - elot
