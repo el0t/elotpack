@@ -4,6 +4,7 @@ import com.elot.elotpack.ElotPack;
 import com.elot.elotpack.blocks.BlockBase;
 import com.elot.elotpack.blocks.ModCrop;
 import com.elot.elotpack.blocks.OreBlockBase;
+import com.elot.elotpack.entities.Bantha;
 import com.elot.elotpack.entities.Womprat;
 import com.elot.elotpack.items.*;
 import net.minecraft.block.Block;
@@ -71,9 +72,10 @@ public class RegistryHandler {
     public static final RegistryObject<Item> POPCORN = ITEMS.register("popcorn", () -> new ItemBase((new Item.Properties()).food(ModFoods.POPCORN)));
     public static final RegistryObject<Item> ZOMBIE_JERKY = ITEMS.register("zombie_jerky", () -> new ItemBase((new Item.Properties()).food(ModFoods.ZOMBIE_JERKY)));
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new ItemBase((new Item.Properties()).food(ModFoods.GARLIC)));
+    public static final RegistryObject<Item> BANTHA_MILK = ITEMS.register("bantha_milk", () -> new BanthaMilkItem((new Item.Properties()).containerItem(Items.BUCKET).maxStackSize(1).rarity(Rarity.UNCOMMON).group(ElotPack.TAB)));
+    public static final RegistryObject<Item> VAMPIRE_DUST = ITEMS.register("vampire_dust", () -> new ItemBase((new Item.Properties()).food(ModFoods.VAMPIRE_DUST)));
 
-    //Entity types
-    public static final RegistryObject<EntityType<Womprat>> WOMPRAT = ENTITY_TYPES.register("womprat",
-            () -> EntityType.Builder.<Womprat>create(Womprat::new, EntityClassification.CREATURE).size(0.9F, 1.3F)
-                    .build(new ResourceLocation(ElotPack.MOD_ID, "womprat").toString()));
+    // Entities
+    public static final RegistryObject<EntityType<Womprat>> WOMPRAT = ENTITY_TYPES.register("womprat", () -> EntityType.Builder.<Womprat>create(Womprat::new, EntityClassification.CREATURE).size(0.5F, 0.4F).build(new ResourceLocation(ElotPack.MOD_ID, "womprat").toString()));
+    public static final RegistryObject<EntityType<Bantha>> BANTHA = ENTITY_TYPES.register("bantha", () -> EntityType.Builder.<Bantha>create(Bantha::new, EntityClassification.CREATURE).size(2.2F, 3.0F).build(new ResourceLocation(ElotPack.MOD_ID, "bantha").toString()));
   }
