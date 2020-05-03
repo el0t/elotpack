@@ -1,6 +1,7 @@
 package com.elot.elotpack.util;
 
 import com.elot.elotpack.ElotPack;
+import com.elot.elotpack.client.entity.render.BanthaRender;
 import com.elot.elotpack.client.entity.render.WompratRender;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -18,5 +19,6 @@ public class ClientEventBusSubscriber {
         RenderTypeLookup.setRenderLayer(RegistryHandler.CORELLIAN_CORN.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.GARLIC_CROP.get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.WOMPRAT.get(), WompratRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(RegistryHandler.BANTHA.get(), BanthaRender::new);
     }
 }

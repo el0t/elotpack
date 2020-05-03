@@ -12,7 +12,7 @@ public class WompratRender extends MobRenderer<Womprat, WompratEntityModel<Wompr
     protected static final ResourceLocation TEXTURE = new ResourceLocation(ElotPack.MOD_ID, "textures/entity/womprat.png");
 
     public WompratRender(EntityRendererManager rendererManager) {
-        super(rendererManager, new WompratEntityModel<Womprat>(), 0.5f);
+        super(rendererManager, new WompratEntityModel<Womprat>(), 0.3f);
     }
 
     @Override
