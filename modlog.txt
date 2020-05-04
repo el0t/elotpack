@@ -1,4 +1,7 @@
 -----CHANGES-----
+5/4
+Onyx ore now drops experience -elot
+
 5/3
 Added Womprat foraging goal and updated their AI -elot
 Added AbstractHerdAnimal and roaming behavior -elot
