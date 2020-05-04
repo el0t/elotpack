@@ -1,4 +1,12 @@
 -----CHANGES-----
+5/3
+Added Womprat foraging goal and updated their AI -elot
+Added AbstractHerdAnimal and roaming behavior -elot
+Banthas are now an AbstractHerdAnimal: updated their AI also -elot
+
+5/2
+Added Bantha entity and model -elot
+
 5/1
 Added the Womprat entity and model -elot
 Garlic seeds now drop from grass and womprats -elot
