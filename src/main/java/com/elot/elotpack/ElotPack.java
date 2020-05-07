@@ -61,5 +61,11 @@ public class ElotPack {
             return new ItemStack(RegistryHandler.ONYX_BLOCK_ITEM.get());
         }
     };
+    public static final ItemGroup ARCANE = new ItemGroup("ElotPack Arcane") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.CRYSTAL_BALL.get());
+        }
+    };
 
 }

@@ -54,6 +54,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CORELLIAN_SEED = ITEMS.register("corellian_seed", () -> new BlockItemBase(CORELLIAN_CORN.get()));
     public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic", () -> new ModCrop(Block.Properties.from(Blocks.POTATOES)));
     public static final RegistryObject<Item> GARLIC_SEED = ITEMS.register("garlic_seed", () -> new BlockItemBase(GARLIC_CROP.get()));
+    public static final RegistryObject<Block> DESSICATED_SOIL = BLOCKS.register("dessicated_soil", () -> new BlockBase(Block.Properties.from(Blocks.DIRT).harvestTool(ToolType.SHOVEL)));
+    public static final RegistryObject<Item> DESSICATED_SOIL_ITEM = ITEMS.register("dessicated_soil", () -> new BlockItemBase(DESSICATED_SOIL.get()));
 
     // Items
     public static final RegistryObject<Item> ONYX = ITEMS.register("onyx", () -> new ItemBase((new Item.Properties())).setBeaconPayment());
@@ -74,7 +76,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> GARLIC = ITEMS.register("garlic", () -> new ItemBase((new Item.Properties()).food(ModFoods.GARLIC)));
     public static final RegistryObject<Item> BANTHA_MILK = ITEMS.register("bantha_milk", () -> new BanthaMilkItem((new Item.Properties()).containerItem(Items.BUCKET).maxStackSize(1).rarity(Rarity.UNCOMMON).group(ElotPack.TAB)));
     public static final RegistryObject<Item> VAMPIRE_DUST = ITEMS.register("vampire_dust", () -> new ItemBase((new Item.Properties()).food(ModFoods.VAMPIRE_DUST)));
-
+    public static final RegistryObject<Item> CRYSTAL_BALL = ITEMS.register("crystal_ball", () -> new CrystalBallItem(new Item.Properties().group(ElotPack.ARCANE).maxStackSize(1), 4));
     // Entities
     public static final RegistryObject<EntityType<Womprat>> WOMPRAT = ENTITY_TYPES.register("womprat", () -> EntityType.Builder.<Womprat>create(Womprat::new, EntityClassification.CREATURE).size(0.5F, 0.4F).build(new ResourceLocation(ElotPack.MOD_ID, "womprat").toString()));
     public static final RegistryObject<EntityType<Bantha>> BANTHA = ENTITY_TYPES.register("bantha", () -> EntityType.Builder.<Bantha>create(Bantha::new, EntityClassification.CREATURE).size(2.2F, 3.0F).build(new ResourceLocation(ElotPack.MOD_ID, "bantha").toString()));
