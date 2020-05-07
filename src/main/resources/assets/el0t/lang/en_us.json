@@ -27,6 +27,9 @@
   "item.el0t.zombie_jerky": "Zombie Jerky",
   "item.el0t.bantha_milk": "Bantha Milk",
   "item.el0t.vampire_dust": "Vampire Dust",
-  "itemGroup.ElotPack Items": "Elot Pack Items",
-  "itemGroup.ElotPack Blocks": "Elot Pack Blocks"
+  "block.el0t.dessicated_soil": "Dessicated Soil",
+  "item.el0t.crystal_ball": "Crystal Ball",
+  "itemGroup.ElotPack Items": "Elot - Items",
+  "itemGroup.ElotPack Blocks": "Elot - Blocks",
+  "itemGroup.ElotPack Arcane": "Elot - Relics"
 }
