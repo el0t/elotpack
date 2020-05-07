@@ -1,0 +1,13 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "el0t:items/crystal_ball"
+  },
+  "overrides": [
+    { "predicate": { "el0t:nearby": 0.0}, "model": "el0t:item/crystal_ball"},
+    { "predicate": { "el0t:nearby": 0.25}, "model": "el0t:item/crystal_ball/crystal_ball1"},
+    { "predicate": { "el0t:nearby": 0.5}, "model": "el0t:item/crystal_ball/crystal_ball2"},
+    { "predicate": { "el0t:nearby": 0.75}, "model": "el0t:item/crystal_ball/crystal_ball3"},
+    { "predicate": { "el0t:nearby": 1.0}, "model": "el0t:item/crystal_ball/crystal_ball4"}
+  ]
+}
