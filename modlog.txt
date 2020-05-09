@@ -1,6 +1,7 @@
 -----CHANGES-----
 5/7
 Crystal ball now has right click event and cooldown -elot
+Crystal ball recipe - elot
 
 5/6
 Added Crystal Ball item and ability to customize the item in an Anvil -elot
