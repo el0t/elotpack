@@ -1,4 +1,7 @@
 -----CHANGES-----
+5/8
+Added alabaster stone, brick, slabs, stairs -elot
+
 5/7
 Crystal ball now has right click event and cooldown -elot
 Crystal ball recipe - elot
