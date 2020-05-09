@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#E#",
+    "###"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "#": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "el0t:crystal_ball"
+  }
+}
