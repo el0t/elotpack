@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.pattern.BlockStateMatcher;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -16,17 +17,21 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.CooldownTracker;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.extensions.IForgeItem;
+import net.minecraftforge.client.ForgeHooksClient;
+import net.minecraftforge.client.event.ClientChatEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -34,7 +39,6 @@ import java.util.stream.Stream;
 
 public class CrystalBallItem extends Item {
     private int detectionRadius;
-    private float nearbyCount;
 
     public CrystalBallItem(Properties properties, int radius) {
         super(properties);
@@ -42,7 +46,10 @@ public class CrystalBallItem extends Item {
     }
 
     public Block getTargetBlock(ItemStack stack){
-        int k = this.getDamage(stack);
+        int k = 0;
+        if (stack.getTag()!= null) {
+            k = stack.getTag().getInt("attuned");
+        }
         return targetBlocks[k];
     }
     public void setDetectionRadius(int radiusIn){
@@ -72,7 +79,6 @@ public class CrystalBallItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-        nearbyCount = 0;
         stack.getOrCreateTag().putFloat("nearbyCount", 0);
         if (entityIn instanceof PlayerEntity) {
             Block b = getTargetBlock(stack);
@@ -87,21 +93,32 @@ public class CrystalBallItem extends Item {
             @OnlyIn(Dist.CLIENT)
             @Override
             public float call(ItemStack stack, @Nullable World worldIn, @Nullable LivingEntity entityIn) {
-                return stack.getTag().getFloat("nearbyCount");
+                if (stack.hasTag()){
+                    assert stack.getTag() != null;
+                    return stack.getTag().getFloat("nearbyCount");
+                } else {
+                    return 0;
+                }
             }
         });
-
         super.inventoryTick(stack, worldIn, entityIn, itemSlot, isSelected);
     }
 
-    public float getNearbyCount() {
-        return nearbyCount;
+    @Override
+    public boolean showDurabilityBar(ItemStack stack) {
+        return false;
     }
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
+        ItemStack stack = playerIn.getHeldItem(handIn);
+        ITextComponent textOut = new StringTextComponent("Attuned to ").appendSibling(getTargetBlock(stack).getNameTextComponent().applyTextStyle(TextFormatting.YELLOW));
+            playerIn.getCooldownTracker().setCooldown(this, 20);
+            playerIn.sendMessage(textOut);
+
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }
+
 
     public Stream<BlockPos> streamNearbyBlockPos(Entity playerIn) {
         BlockPos blockPos = playerIn.getPosition();
@@ -114,17 +131,6 @@ public class CrystalBallItem extends Item {
         return BlockPos.getAllInBox(new MutableBoundingBox(minBoundX, minBoundY, minBoundZ, maxBoundX, maxBoundY, maxBoundZ));
     }
 
-
-    @Override
-    public double getDurabilityForDisplay(ItemStack stack) {
-        return 0;
-    }
-
-
-    @Override
-    public int getMaxDamage(ItemStack stack) {
-        return targetBlocks.length + 1;
-    }
 
     private Block[] targetBlocks = {Blocks.COAL_ORE, Blocks.IRON_ORE, Blocks.GOLD_ORE, Blocks.DIAMOND_ORE, Blocks.EMERALD_ORE,
             Blocks.REDSTONE_ORE, Blocks.LAPIS_ORE, RegistryHandler.ORE_ONYX.get(), RegistryHandler.ORE_SILVER.get(), RegistryHandler.ORE_MITHRIL.get()};

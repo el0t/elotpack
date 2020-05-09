@@ -21,13 +21,14 @@ public class CrystalBallRepairEvent {
         ItemStack left = event.getLeft();
 
         if (left.getItem() instanceof CrystalBallItem){
-            ElotPack.LOGGER.debug("CrystalBallRepairEvent fired - valid CrystalBallItem");
+            ElotPack.LOGGER.debug("CrystalBallRepairEvent - fired with CrystalBallItem");
                 Block[] targetBlocks = {Blocks.COAL_ORE, Blocks.IRON_ORE, Blocks.GOLD_ORE, Blocks.DIAMOND_ORE,
                         Blocks.EMERALD_ORE, Blocks.REDSTONE_ORE, Blocks.LAPIS_ORE, RegistryHandler.ORE_ONYX.get(),
                         RegistryHandler.ORE_SILVER.get(), RegistryHandler.ORE_MITHRIL.get()};
                 Item[] sourceItems = {Items.COAL, Items.IRON_INGOT, Items.GOLD_INGOT, Items.DIAMOND, Items.EMERALD,
                         Items.REDSTONE, Items.LAPIS_LAZULI, RegistryHandler.ONYX.get(), RegistryHandler.INGOT_SILVER.get(),
                         RegistryHandler.INGOT_MITHRIL.get()};
+                int[] xpCosts = {3, 5, 9, 12, 12, 5, 9, 9, 5, 12};
 
             boolean f = false;
             for(int k = 0; k < sourceItems.length; k++){
@@ -36,9 +37,9 @@ public class CrystalBallRepairEvent {
                 }
             }
             if (f) {
-                ElotPack.LOGGER.debug("CrystalBallRepairEvent fired - valid RepairItem");
+                ElotPack.LOGGER.debug("CrystalBallRepairEvent - valid RepairItem inserted");
                 ItemStack outputBall = left.copy();
-                outputBall.setDamage(0);
+                outputBall.getOrCreateTag().putInt("attuned", 0);
 
                 int k = 0;
                 for (int j = 0; j < sourceItems.length; j++){
@@ -47,8 +48,8 @@ public class CrystalBallRepairEvent {
                     }
                 }
 
-                outputBall.setDamage(k);
-                event.setCost(10);
+                outputBall.getTag().putInt("attuned", k);
+                event.setCost(xpCosts[k]);
                 event.setMaterialCost(1);
 
                 event.setOutput(outputBall);
