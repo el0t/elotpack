@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "el0t:block/alabaster_slab" },
+    "type=top": { "model": "el0t:block/alabaster_slab_top" },
+    "type=double": { "model": "el0t:block/alabaster" }
+  }
+}

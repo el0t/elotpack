@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "el0t:blocks/alabaster",
+    "top": "el0t:blocks/alabaster",
+    "side": "el0t:blocks/alabaster"
+  }
+}
