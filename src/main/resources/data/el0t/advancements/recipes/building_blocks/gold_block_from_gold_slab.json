@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "el0t:silver_block"
+      "el0t:gold_block"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "el0t:ingot_silver"
+            "item": "el0t:gold_block_slab"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "el0t:silver_block"
+        "recipe": "el0t:gold_block"
       }
     }
   },
   "requirements": [
     [
-      "has_s",
+      "has_gold_slab",
       "has_the_recipe"
     ]
   ]

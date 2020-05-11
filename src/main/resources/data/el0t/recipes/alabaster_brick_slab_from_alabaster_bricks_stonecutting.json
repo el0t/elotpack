@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "el0t:alabaster_bricks"
+  },
+  "result": "el0t:alabaster_brick_slab",
+  "count": 2
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "el0t:alabaster"
+  },
+  "result": "el0t:alabaster_pillar",
+  "count": 1
+}

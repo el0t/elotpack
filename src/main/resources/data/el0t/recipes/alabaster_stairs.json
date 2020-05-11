@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "el0t:alabaster"
+    }
+  },
+  "result": {
+    "item": "el0t:alabaster_stairs",
+    "count": 4
+  }
+}

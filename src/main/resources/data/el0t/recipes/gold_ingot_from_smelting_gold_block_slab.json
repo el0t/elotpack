@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "el0t:gold_block_slab"
+  },
+  "result": {
+    "item": "minecraft:gold_ingot",
+    "count": 4
+  },
+  "cookingtime": 200
+}
