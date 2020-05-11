@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": { "model": "el0t:block/alabaster_pillar" },
+    "axis=z": { "model": "el0t:block/alabaster_pillar", "x": 90 },
+    "axis=x": { "model": "el0t:block/alabaster_pillar", "x": 90, "y": 90 }
+  }
+}

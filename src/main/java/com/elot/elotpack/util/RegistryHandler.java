@@ -7,9 +7,7 @@ import com.elot.elotpack.blocks.OreBlockBase;
 import com.elot.elotpack.entities.Bantha;
 import com.elot.elotpack.entities.Womprat;
 import com.elot.elotpack.items.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.entity.EntityClassification;
@@ -37,25 +35,29 @@ public class RegistryHandler {
     }
 
 
-    // Blocks and Block Items
+    // Blocks
     public static final RegistryObject<Block> ORE_ONYX = BLOCKS.register("ore_onyx", () -> new OreBlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1)));
-    public static final RegistryObject<Item> ORE_ONYX_ITEM = ITEMS.register("ore_onyx", () -> new BlockItemBase(ORE_ONYX.get()));
     public static final RegistryObject<Block> ONYX_BLOCK = BLOCKS.register("onyx_block", () -> new BlockBase(Block.Properties.create(Material.IRON, MaterialColor.BLACK).harvestTool(ToolType.PICKAXE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)).setBeaconBase());
-    public static final RegistryObject<Item> ONYX_BLOCK_ITEM = ITEMS.register("onyx_block", () -> new BlockItemBase(ONYX_BLOCK.get()));
     public static final RegistryObject<Block> ORE_SILVER = BLOCKS.register("ore_silver", () -> new OreBlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F).harvestLevel(1)));
-    public static final RegistryObject<Item> ORE_SILVER_ITEM = ITEMS.register("ore_silver", () -> new BlockItemBase(ORE_SILVER.get()));
     public static final RegistryObject<Block> SILVER_BLOCK = BLOCKS.register("silver_block", () -> new BlockBase(Block.Properties.create(Material.IRON, MaterialColor.IRON).harvestTool(ToolType.PICKAXE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)).setBeaconBase());
-    public static final RegistryObject<Item> SILVER_BLOCK_ITEM = ITEMS.register("silver_block", () -> new BlockItemBase(SILVER_BLOCK.get()));
     public static final RegistryObject<Block> ORE_MITHRIL = BLOCKS.register("ore_mithril", () -> new OreBlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F,3.0F).harvestLevel(2)));
-    public static final RegistryObject<Item> ORE_MITHRIL_ITEM = ITEMS.register("ore_mithril", () -> new BlockItemBase(ORE_MITHRIL.get()));
     public static final RegistryObject<Block> MITHRIL_BLOCK = BLOCKS.register("mithril_block", () -> new BlockBase(Block.Properties.create(Material.IRON, MaterialColor.BLUE).harvestTool(ToolType.PICKAXE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)).setBeaconBase());
-    public static final RegistryObject<Item> MITHRIL_BLOCK_ITEM = ITEMS.register("mithril_block", () -> new BlockItemBase(MITHRIL_BLOCK.get()));
+    public static final RegistryObject<Block> DESSICATED_SOIL = BLOCKS.register("dessicated_soil", () -> new BlockBase(Block.Properties.from(Blocks.DIRT).harvestTool(ToolType.SHOVEL)));
+    public static final RegistryObject<Block> ALABASTER = BLOCKS.register("alabaster", () -> new BlockBase(Block.Properties.from(Blocks.QUARTZ_BLOCK).lightValue(1)));
+    public static final RegistryObject<Block> ALABASTER_BRICKS = BLOCKS.register("alabaster_bricks", () -> new BlockBase(Block.Properties.from(ALABASTER.get())));
+    public static final RegistryObject<Block> ALABASTER_PILLAR = BLOCKS.register("alabaster_pillar", () -> new RotatedPillarBlock(Block.Properties.from(ALABASTER.get())));
+    public static final RegistryObject<Block> ALABASTER_SLAB = BLOCKS.register("alabaster_slab", () -> new SlabBlock(Block.Properties.from(ALABASTER.get())));
+    public static final RegistryObject<Block> ALABASTER_STAIRS = BLOCKS.register("alabaster_stairs", () -> new StairsBlock( () -> ALABASTER.get().getDefaultState(), Block.Properties.from(ALABASTER.get())));
+    public static final RegistryObject<Block> ALABASTER_BRICK_SLAB = BLOCKS.register("alabaster_brick_slab", () -> new SlabBlock(Block.Properties.from(ALABASTER.get())));
+    public static final RegistryObject<Block> ALABASTER_BRICK_STAIRS = BLOCKS.register("alabaster_brick_stairs", () -> new StairsBlock( () -> ALABASTER_BRICKS.get().getDefaultState(), Block.Properties.from(ALABASTER.get())));
+    public static final RegistryObject<Block> GOLD_BLOCK_SLAB = BLOCKS.register("gold_block_slab", () -> new SlabBlock(Block.Properties.from(Blocks.GOLD_BLOCK)));
+
+
+    // Crops
     public static final RegistryObject<Block> CORELLIAN_CORN = BLOCKS.register("corellian_corn", () -> new ModCrop(Block.Properties.from(Blocks.WHEAT)));
     public static final RegistryObject<Item> CORELLIAN_SEED = ITEMS.register("corellian_seed", () -> new BlockItemBase(CORELLIAN_CORN.get()));
     public static final RegistryObject<Block> GARLIC_CROP = BLOCKS.register("garlic", () -> new ModCrop(Block.Properties.from(Blocks.POTATOES)));
     public static final RegistryObject<Item> GARLIC_SEED = ITEMS.register("garlic_seed", () -> new BlockItemBase(GARLIC_CROP.get()));
-    public static final RegistryObject<Block> DESSICATED_SOIL = BLOCKS.register("dessicated_soil", () -> new BlockBase(Block.Properties.from(Blocks.DIRT).harvestTool(ToolType.SHOVEL)));
-    public static final RegistryObject<Item> DESSICATED_SOIL_ITEM = ITEMS.register("dessicated_soil", () -> new BlockItemBase(DESSICATED_SOIL.get()));
 
     // Items
     public static final RegistryObject<Item> ONYX = ITEMS.register("onyx", () -> new ItemBase((new Item.Properties())).setBeaconPayment());

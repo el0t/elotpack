@@ -1,10 +1,5 @@
 package com.elot.elotpack.client.entity.model;
 
-// Made with Blockbench 3.5.2
-// Exported for Minecraft version 1.15
-// Paste this class into your mod and generate all required imports
-
-
 import com.elot.elotpack.entities.Womprat;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "el0t:silver_block"
+      "el0t:alabaster_brick_stairs"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "el0t:ingot_silver"
+            "item": "el0t:alabaster_bricks"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "el0t:silver_block"
+        "recipe": "el0t:alabaster_brick_stairs"
       }
     }
   },

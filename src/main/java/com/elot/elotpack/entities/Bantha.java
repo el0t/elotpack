@@ -29,6 +29,7 @@ public class Bantha extends AbstractHerdAnimal {
         return b;
     }
 
+
     @Override
     protected void registerGoals() {
         super.registerGoals();
