@@ -1,4 +1,8 @@
 -----CHANGES-----
+5/10
+BlockItems now register in the main class -elot
+Added gold block slabs, and various recipes - elot
+
 5/8
 Added alabaster stone, brick, slabs, stairs -elot
 
